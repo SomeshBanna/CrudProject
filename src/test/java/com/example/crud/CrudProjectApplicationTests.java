@@ -14,6 +14,7 @@ class CrudProjectApplicationTests {
 	void contextLoads() {
 		logger.info("TEST CASE EXECUTING...");
 		logger.info("TEST CASE EXECUTING 2...");
+		logger.info("TEST CASE EXECUTING 3...");
 		assertEquals(true,true);
 	}
 
