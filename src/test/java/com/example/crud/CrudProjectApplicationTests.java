@@ -13,6 +13,7 @@ class CrudProjectApplicationTests {
 	@Test
 	void contextLoads() {
 		logger.info("TEST CASE EXECUTING...");
+		logger.info("TEST CASE EXECUTING 2...");
 		assertEquals(true,true);
 	}
 
