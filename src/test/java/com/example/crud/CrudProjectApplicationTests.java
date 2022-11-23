@@ -16,7 +16,11 @@ class CrudProjectExampleApplicationTests {
 		logger.info("TEST CASE EXECUTING 2...");
 		logger.info("TEST CASE EXECUTING 3...");
 <<<<<<< HEAD
+<<<<<<< HEAD
 		logger.info("Test 4");
+=======
+		logger.info("TEST CASE EXECUTING 4...");
+>>>>>>> e4b3c1cdd15315299b59ef8e08322799d7877aec
 =======
 		logger.info("TEST CASE EXECUTING 4...");
 >>>>>>> e4b3c1cdd15315299b59ef8e08322799d7877aec
