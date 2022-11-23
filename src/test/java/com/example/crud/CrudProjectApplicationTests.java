@@ -15,6 +15,7 @@ class CrudProjectApplicationTests {
 		logger.info("TEST CASE EXECUTING...");
 		logger.info("TEST CASE EXECUTING 2...");
 		logger.info("TEST CASE EXECUTING 3...");
+		logger.info("Test 4");
 		assertEquals(true,true);
 	}
 
