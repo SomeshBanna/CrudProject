@@ -8,13 +8,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CrudProjectApplicationTests {
-	public static Logger logger=LoggerFactory.getLogger(CrudProjectApplicationTests.class);
+class CrudProjectExampleApplicationTests {
+	public static Logger logger=LoggerFactory.getLogger(CrudProjectExampleApplicationTests.class);
 	@Test
 	void contextLoads() {
 		logger.info("TEST CASE EXECUTING...");
 		logger.info("TEST CASE EXECUTING 2...");
 		logger.info("TEST CASE EXECUTING 3...");
+		logger.info("TEST CASE EXECUTING 4...");
 		assertEquals(true,true);
 	}
 
