@@ -22,7 +22,7 @@ pipeline {
                 // To run Maven on a Windows agent, use
                  bat "mvn -Dmaven.test.failure.ignore=true clean package"
             }
-} catch(e) {
+} }catch(e) {
     emailext body: '$DEFAULT_CONTENT', 
         recipientProviders: [
             [$class: 'CulpritsRecipientProvider'],
