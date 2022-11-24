@@ -18,7 +18,7 @@ pipeline {
 
                 // To run Maven on a Windows agent, use
                  bat "mvn clean package"
-                 if(currentBuild.result=FAILED){
+                 if(currentBuild.result="FAILED"){
   
                  		emailext body: '$DEFAULT_CONTENT', 
         recipientProviders: [
