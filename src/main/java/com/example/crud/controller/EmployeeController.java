@@ -40,7 +40,7 @@ public class EmployeeController {
 		return service.getEmployeeByName(name);
 	}
 	@PutMapping("/update")
-	public Employee updateEmployee(@RequestBody Employee employee) {
+	public Employe updateEmployee(@RequestBody Employee employee) {
 		return service.updateEmployee(employee);
 	}
 	@DeleteMapping("/delete/{id}")
