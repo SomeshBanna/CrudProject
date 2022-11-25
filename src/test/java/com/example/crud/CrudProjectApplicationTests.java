@@ -61,7 +61,7 @@ class CrudProjectExampleApplicationTests {
 
         Employee employee = employeeRepository.findById(1).get();
 
-        Assertions.assertThat(employee.getId()).isEqualTo(1);
+        Assertions.asserthat(employee.getId()).isEqualTo(1);
 
     }
 
