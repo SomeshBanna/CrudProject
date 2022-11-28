@@ -47,5 +47,15 @@ pipeline {
      				
      				}	 
      		 }
+     		 
+     		 
+     	stage('Static code analysis') {
+     		steps{
+     			withSonarQubeEnv('sonarqube-9.7.1') {
+     			    bat "mvn sonar:sonar"
+     			    }
+     			   }
+     			}
+     			
     }
 }
