@@ -52,7 +52,10 @@ pipeline {
      	stage('Static code analysis') {
      		steps{
      			withSonarQubeEnv('sonarqube-9.7.1') {
-     			    bat "mvn sonar:sonar"
+     			    bat "mvn clean verify sonar:sonar \
+  							-Dsonar.projectKey=demoapp-project \
+  							-Dsonar.host.url=http://localhost:9000 \
+    						-Dsonar.login=sqp_6d8a6084617a7f37857ef0829bc5f9a6aff3d971"
      			    }
      			   }
      			}
