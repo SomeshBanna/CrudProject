@@ -36,9 +36,12 @@ public class EmployeeService {
 	}
 	public Employee updateEmployee(Employee employee) {
 		Optional<Employee> existingEmployee=repository.findById(employee.getId());
-		Employee newEntity=existingEmployee.get();
+		Employee newEntity = null;
+		if(existingEmployee.isPresent()) {
+		newEntity=existingEmployee.get();
 		newEntity.setName(employee.getName());
 		newEntity.setSalary(employee.getSalary());
+		}
 		return repository.save(newEntity);
 	}
 }

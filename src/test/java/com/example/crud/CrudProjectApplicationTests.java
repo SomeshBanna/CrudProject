@@ -1,16 +1,7 @@
 package com.example.crud;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
@@ -28,18 +19,9 @@ import java.util.Optional;
 class CrudProjectExampleApplicationTests {
     @Autowired
     private EmployeeRepository employeeRepository;
-
-	public static Logger logger=LoggerFactory.getLogger(CrudProjectExampleApplicationTests.class);
 	@Test
 	void contextLoads() {
-		logger.info("TEST CASE EXECUTING...");
-		logger.info("TEST CASE EXECUTING 2...");
-		logger.info("TEST CASE EXECUTING 3...");
-
-		logger.info("Test 4");
-
-
-		assertEquals(true,true);
+		
 	}
    /*@Test
     @Order(1)
