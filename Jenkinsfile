@@ -36,7 +36,16 @@ pipeline {
             		
      		 }
      		 
-     		 
+     	stage('Testing') {
+     		steps {
+     			bat "mvn test"
+     			}
+     			post {
+     				success{
+     					junit 'reports/**/*.xml'
+     				}
+     				
+     				}	 
      		 
     }
 }
