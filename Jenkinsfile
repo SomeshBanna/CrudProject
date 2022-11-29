@@ -55,7 +55,7 @@ pipeline {
      			    bat "mvn clean verify sonar:sonar \
   							-Dsonar.projectKey=demoapp-project \
   							-Dsonar.host.url=http://localhost:9000 \
-    						-Dsonar.login=sqp_6d8a6084617a7f37857ef0829bc5f9a6aff3d971"
+    						-Dsonar.login=squ_9aa9701217794449eaf181b48f048ea535c5a9d7"
      			    }
      			   }
      			}
