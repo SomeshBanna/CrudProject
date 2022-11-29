@@ -64,7 +64,7 @@ pipeline {
            steps {
               timeout(time: 1, unit: 'HOURS') {
                  echo "before quality gate"
-                waitForQualityGate abortPipeline:false
+                waitForQualityGate abortPipeline: true
                 	echo "after qg"
               }
             }
