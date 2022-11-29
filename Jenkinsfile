@@ -49,25 +49,24 @@ pipeline {
      		 }
      		 
      		 
-     	stage('Static code analysis') {
-     		steps{
-     			withSonarQubeEnv('sonarqube-9.7.1') {
-     			    bat "mvn clean verify sonar:sonar \
-  							-Dsonar.projectKey=demoapp-project \
-  							-Dsonar.host.url=http://localhost:9000 \
-    						-Dsonar.login=sqp_6d8a6084617a7f37857ef0829bc5f9a6aff3d971"
-     			    }
-     			  echo 'Checking quality gate...'
+     	stage('Sonarqube Analysis') {
+
+            steps {
+                withSonarQubeEnv('sonarqube-9.7.1') {
+                    bat "${scannerHome}/bin/sonar-scanner"
+                  }
+                sleep time: 30000, unit: 'MILLISECONDS'
+                echo "test1"
                 script {
-                    timeout(time: 1, unit: 'HOURS') {
+                        echo "test2"
                         def qg = waitForQualityGate()
                         if (qg.status != 'OK') {
                             error "Pipeline aborted due to quality gate failure: ${qg.status}"
-                        }
+                            echo "test3" }
                     }
                 }
-     			   }
-     			}
+        }
+     	
      			
      	
 
