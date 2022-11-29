@@ -57,12 +57,7 @@ pipeline {
   							-Dsonar.host.url=http://localhost:9000 \
     						-Dsonar.login=sqp_6d8a6084617a7f37857ef0829bc5f9a6aff3d971"
      			    }
-     			   }
-     			}
-     			
-     	 stage('Check Quality Gate') {
-            steps {
-                echo 'Checking quality gate...'
+     			  echo 'Checking quality gate...'
                 script {
                     timeout(time: 1, unit: 'HOURS') {
                         def qg = waitForQualityGate()
@@ -71,8 +66,10 @@ pipeline {
                         }
                     }
                 }
-            }
-        }
+     			   }
+     			}
+     			
+     	
 
      		
      	
