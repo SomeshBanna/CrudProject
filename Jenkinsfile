@@ -89,10 +89,10 @@ pipeline {
      	  stage("Publish to Nexus Repository Manager") {
 
             steps {
-
+					bat "maven package"
                 script {
                 	
-                	bat "maven package"
+                	
                     pom = readMavenPom file: "pom.xml";
 
                     filesByGlob = findFiles(glob: "target/*.${pom.packaging}");
