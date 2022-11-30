@@ -84,14 +84,19 @@ pipeline {
             }
            
           }
-     		
+          
+          stage('Packaging'){
+          	steps {
+          	 	script {
+            	bat "maven package"
+            	}
+     		}
+     	}
      	
      	  stage("Publish to Nexus Repository Manager") {
 
             steps {
-            	script {
-            	bat "maven package"
-            	}
+            	
 				
 				
                 script {
