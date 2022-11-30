@@ -6,17 +6,17 @@ pipeline {
         maven "MAVEN_HOME"
     }
       environment {
-9
+
         NEXUS_VERSION = "nexus3"
-10
+
         NEXUS_PROTOCOL = "http"
-11
+
         NEXUS_URL = "localhost:8081"
-12
+
         NEXUS_REPOSITORY = "java-app"
-13
+
         NEXUS_CREDENTIAL_ID = "NEXUS_CRED"
-14
+
     }
     
 
