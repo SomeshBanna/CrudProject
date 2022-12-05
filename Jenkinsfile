@@ -166,7 +166,7 @@ pipeline {
         }
      	stage('downstream job'){
      	steps{
-     	build job: 'DeployApp', parameters: [[$class: 'StringParameterValue', name: 'systemname', value: systemname]]
+     	build job: 'DeployApp'
      	}
      	
      	}
