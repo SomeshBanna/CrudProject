@@ -67,9 +67,9 @@ pipeline {
      		steps{
      			withSonarQubeEnv('sonarqube-9.7.1') {
      			    bat "mvn clean verify sonar:sonar \
-  							-Dsonar.projectKey=demoapp-project \
-  							-Dsonar.host.url=http://localhost:9000 \
-    						-Dsonar.login=squ_9aa9701217794449eaf181b48f048ea535c5a9d7"
+  						-Dsonar.projectKey=demoapp-project \
+ 						 -Dsonar.host.url=http://localhost:9000 \
+  							-Dsonar.login=sqp_de5db15926b2eba8584eea966720fc95bb0bec86"
      			    }
      			   }
      			}
