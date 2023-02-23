@@ -22,6 +22,7 @@ class CrudProjectExampleApplicationTests {
     private EmployeeRepository employeeRepository;
 	@Test
 	void contextLoads() {
+		System.out.println("add print statement in tests");
 		
 	}
    /*@Test
