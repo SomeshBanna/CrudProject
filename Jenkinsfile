@@ -13,9 +13,9 @@ pipeline {
 
         NEXUS_URL = "localhost:8081"
 
-        NEXUS_REPOSITORY = "java-app"
+        NEXUS_REPOSITORY = "JenkinsRepo"
 
-        NEXUS_CREDENTIAL_ID = "NEXUS_CRED"
+        NEXUS_CREDENTIAL_ID = "CRED_NEXUS"
 
     }
     
