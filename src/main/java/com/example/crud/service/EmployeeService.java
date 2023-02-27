@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
 
+import com.example.crud.EmployeeNotFoundException;
 import com.example.crud.entity.Employee;
 import com.example.crud.repository.EmployeeRepository;
 
@@ -25,16 +26,30 @@ public class EmployeeService {
 	public List<Employee> getEmployees(){
 		return repository.findAll();
 	}
-	public Optional<Employee> getEmployeeById(int id){
-		return repository.findById(id);
+	public Employee getEmployeeById(int id) throws EmployeeNotFoundException{
+		Optional<Employee> result=repository.findById(id);
+		if(result.isPresent()) {
+			return result.get();
+		}else {
+			throw new EmployeeNotFoundException("Employee not found");
+		}
+		//return repository.findById(id);
 	}
 	public Employee getEmployeeByName(String name) {
+		
 		return repository.findByName(name);
 	}
-	public String deleteEmployee(int id) {
+	/*public String deleteEmployee(int id) {
 		repository.deleteById(id);
 		return " Employee removed";
+	}*/
+	public void deleteEmployee(int id) throws EmployeeNotFoundException {
+		Employee employee = repository.findById(id)
+				.orElseThrow(() -> new EmployeeNotFoundException("Employee deleted successfully"));
+		
+		repository.delete(employee);
 	}
+
 	public Employee updateEmployee(Employee employee) {
 		Optional<Employee> existingEmployee=repository.findById(employee.getId());
 		Employee newEntity = null;
