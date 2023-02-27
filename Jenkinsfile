@@ -166,7 +166,7 @@ pipeline {
         }
      	stage('downstream job'){
      	steps{
-     	build job: 'DeployApp'
+     	build job: 'DeployAppn'
      	}
      	
      	}
