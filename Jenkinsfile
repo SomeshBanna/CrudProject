@@ -88,7 +88,7 @@ pipeline {
           stage('Packaging'){
           	steps {
           	 	script {
-            	bat "mvn package"
+            	bat "mvn clean package"
             	}
      		}
      	}
