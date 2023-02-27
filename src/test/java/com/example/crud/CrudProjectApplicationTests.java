@@ -4,27 +4,21 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.assertj.core.api.Assertions;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.annotation.Rollback;
-
 import com.example.crud.entity.Employee;
 import com.example.crud.repository.EmployeeRepository;
-
-import javax.sql.DataSource;
 import java.util.List;
-import java.util.Optional;
+
 
 @SpringBootTest
 class CrudProjectExampleApplicationTests {
     @Autowired
     private EmployeeRepository employeeRepository;
-	@Test
+	/*@Test
 	void contextLoads() {
 		
 		
-	}
+	}*/
   /* @Test
     @Order(1)
     @Rollback(value = false)
@@ -55,7 +49,7 @@ class CrudProjectExampleApplicationTests {
 
         List<Employee> employees = employeeRepository.findAll();
 
-        Assertions.assertThat(employees.size()).isPositive();
+         Assertions.assertThat(employees).isNotEmpty();
 
     }
 
