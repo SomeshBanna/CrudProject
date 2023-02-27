@@ -166,6 +166,7 @@ pipeline {
         }
      	stage('downstream job'){
      	steps{
+     		echo "down stream job started"
      	build job: 'DeployAppn'
      	}
      	
