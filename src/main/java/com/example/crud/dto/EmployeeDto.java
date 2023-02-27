@@ -6,7 +6,7 @@ public class EmployeeDto {
 	private double salary;
 	public EmployeeDto() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 	public EmployeeDto(int id, String name, double salary) {
 		super();

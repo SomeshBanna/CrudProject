@@ -33,16 +33,13 @@ public class EmployeeService {
 		}else {
 			throw new EmployeeNotFoundException("Employee not found");
 		}
-		//return repository.findById(id);
+		
 	}
 	public Employee getEmployeeByName(String name) {
 		
 		return repository.findByName(name);
 	}
-	/*public String deleteEmployee(int id) {
-		repository.deleteById(id);
-		return " Employee removed";
-	}*/
+	
 	public void deleteEmployee(int id) throws EmployeeNotFoundException {
 		Employee employee = repository.findById(id)
 				.orElseThrow(() -> new EmployeeNotFoundException("Employee deleted successfully"));
