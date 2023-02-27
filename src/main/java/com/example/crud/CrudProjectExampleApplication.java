@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CrudProjectExampleApplication {
 
 	public static void main(String[] args) {
-		System.out.println("Crud Application");
+		
 		SpringApplication.run(CrudProjectExampleApplication.class, args);
 	}
 

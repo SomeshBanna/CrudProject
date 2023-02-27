@@ -22,10 +22,10 @@ class CrudProjectExampleApplicationTests {
     private EmployeeRepository employeeRepository;
 	@Test
 	void contextLoads() {
-		System.out.println("add print statement in tests");
+		
 		
 	}
-   /*@Test
+  /* @Test
     @Order(1)
     @Rollback(value = false)
     public void saveEmployeeTest(){
@@ -36,12 +36,12 @@ class CrudProjectExampleApplicationTests {
         employee.setSalary(45000);
         employeeRepository.save(employee);
 
-        Assertions.assertThat(employee.getId()).isGreaterThan(0);
-    }
-*/
+        Assertions.assertThat(employee.getId()).isPositive();
+    }*/
+
     @Test
     @Order(2)
-    public void getEmployeeTest(){
+    void getEmployeeTest(){
 
         Employee employee = employeeRepository.findById(1).get();
 
@@ -51,18 +51,18 @@ class CrudProjectExampleApplicationTests {
 
     @Test
     @Order(3)
-    public void getListOfEmployeesTest(){
+    void getListOfEmployeesTest(){
 
         List<Employee> employees = employeeRepository.findAll();
 
-        Assertions.assertThat(employees.size()).isGreaterThan(0);
+        Assertions.assertThat(employees.size()).isPositive();
 
     }
 
     @Test
     @Order(4)
     @Rollback(value = false)
-    public void updateEmployeeTest(){
+    void updateEmployeeTest(){
 
         Employee employee = employeeRepository.findById(1).get();
 
