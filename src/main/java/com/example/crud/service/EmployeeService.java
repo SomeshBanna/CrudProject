@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.lang.Nullable;
+
 import org.springframework.stereotype.Service;
 
 import com.example.crud.entity.Employee;
@@ -35,7 +35,7 @@ public class EmployeeService {
 		repository.deleteById(id);
 		return " Employee removed";
 	}
-	public Employee updateEmployee(@Nullable Employee employee) {
+	public Employee updateEmployee(Employee employee) {
 		Optional<Employee> existingEmployee=repository.findById(employee.getId());
 		Employee newEntity = null;
 		if(existingEmployee.isPresent()) {
